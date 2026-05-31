@@ -1,122 +1,101 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ITJobs from "./pages/ITJobs";
+import Finance from "./pages/Finance";
+import Navbar from "./Navbar/Navbar";
+import Home from "./Pages/Home.jsx";
+import Hero from "./Hero/Hero.jsx";
+
+import JobDetail from "./Pages/JobDetails";
+import FinanceJobDetail from "./Pages/FinanceJobDetail";
+import EngineerJobDetail from "./Pages/EngineerJobsDetails.jsx";
+import EngineerJobs from "./Pages/EngineerJobs.jsx";
+
+import MarketJobList from "./Pages/MarketJobList.jsx";
+import MarketJobDetail from "./Pages/MarketJobsDetail.jsx";
+
+import RemoteJobDetail from "./Pages/RemoteJobDetails.jsx";
+import RemoteJobList from "./Pages/RemoteJobList.jsx";
+
+import FresherJobs from "./Pages/FresherJobs.jsx";
+import FresherJobDetail from "./Pages/FresherJobDetail.jsx";
+
+import HealthcareJobList from "./Pages/HealthcareJobList.jsx";
+import HealthcareJobDetail from "./Pages/HealthcareJobDetail.jsx";
+
+import SalesJobList from "./Pages/SalesJobList.jsx";
+import SalesJobDetail from "./Pages/SalesJobDetail.jsx";
+
+import InternshipJobList from "./Pages/InternshipJobList.jsx";
+import InternshipJobDetail from "./Pages/InternshipJobDetail.jsx";
+
+import FullTimeJobList from "./Pages/FullTimeJobList.jsx";
+import FullTimeJobDetail from "./Pages/FullTimeJobDetail.jsx";
+
+import PartTimeJobList from "./Pages/PartTimeJobList.jsx";
+import PartTimeJobDetail from "./Pages/PartTimeJobDetail.jsx";
+
+import FreelanceJobList from "./Pages/FreelanceJobList.jsx";
+import FreelanceJobDetail from "./Pages/FreelanceJobDetail.jsx";
+
+import BankingJobList from "./Pages/BankingJobList.jsx";
+import BankingJobDetail from "./Pages/BankingJobDetail.jsx";
+
+import InternationalJobList from "./Pages/InternationalJobList.jsx";
+import InternationalJobDetail from "./Pages/InternationalJobDetail.jsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <BrowserRouter>
+      <Navbar />
+      <Hero />
 
-      <div className="ticks"></div>
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <Route path="/it-jobs" element={<ITJobs />} />
+        <Route path="/finance-jobs" element={<Finance />} />
+        <Route path="/engineer-jobs" element={<EngineerJobs />} />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <Route path="/it-job/:id" element={<JobDetail />} />
+        <Route path="/finance-job/:id" element={<FinanceJobDetail />} />
+        <Route path="/engineer-job/:id" element={<EngineerJobDetail />} />
+
+        <Route path="/market-jobs" element={<MarketJobList />} />
+        <Route path="/market-job/:id" element={<MarketJobDetail />} />
+
+        <Route path="/remote-jobs" element={<RemoteJobList />} />
+        <Route path="/remote-job/:id" element={<RemoteJobDetail />} />
+
+        <Route path="/fresher-jobs" element={<FresherJobs />} />
+        <Route path="/fresher-job/:id" element={<FresherJobDetail />} />
+
+        <Route path="/healthcare-jobs" element={<HealthcareJobList />} />
+        <Route path="/healthcare-job/:id" element={<HealthcareJobDetail />} />
+
+        <Route path="/sales-jobs" element={<SalesJobList />} />
+        <Route path="/sales-job/:id" element={<SalesJobDetail />} />
+
+        <Route path="/internship-jobs" element={<InternshipJobList />} />
+        <Route path="/internship-job/:id" element={<InternshipJobDetail />} />
+
+        <Route path="/full-time-jobs" element={<FullTimeJobList />} />
+        <Route path="/full-time-job/:id" element={<FullTimeJobDetail />} />
+
+        <Route path="/part-time-jobs" element={<PartTimeJobList />} />
+        <Route path="/part-time-job/:id" element={<PartTimeJobDetail />} />
+
+        <Route path="/freelance-jobs" element={<FreelanceJobList />} />
+        <Route path="/freelance-job/:id" element={<FreelanceJobDetail />} />
+
+        <Route path="/banking-jobs" element={<BankingJobList />} />
+        <Route path="/banking-job/:id" element={<BankingJobDetail />} />
+
+        <Route path="/international-jobs" element={<InternationalJobList />} />
+        <Route path="/international-job/:id" element={<InternationalJobDetail />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
