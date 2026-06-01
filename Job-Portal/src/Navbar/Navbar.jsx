@@ -39,7 +39,7 @@ const Navbar = () => {
 
             {openMenu === "jobs" && (
               <div className="absolute top-10 left-0 bg-white p-3 rounded-md shadow-lg w-96 grid grid-cols-2 gap-2 z-[1000]">
-                
+
                 <Link to="/it-jobs" onClick={closeMenu} className="hover:text-cyan-600">
                   IT Jobs
                 </Link>
@@ -105,13 +105,36 @@ const Navbar = () => {
               Trainings <FaChevronDown size={12} />
             </div>
 
-            {openMenu === "trainings" && (
-              <div className="absolute top-10 left-0 bg-gray-800 text-white p-3 rounded-md shadow-lg w-40 z-[1000]">
-                <p className="hover:text-cyan-400">Online</p>
-                <p className="hover:text-cyan-400">Offline</p>
-                <p className="hover:text-cyan-400">Certifications</p>
+            { openMenu === "trainings" && (
+              <div className="absolute top-10 left-0 bg-gray-800 text-white p-3 rounded-md shadow-lg w-48 z-[1000]">
+
+                <Link
+                  to="/training/online"
+                  onClick={closeMenu}
+                  className="block py-2 hover:text-cyan-400"
+                >
+                  Online Training
+                </Link>
+
+                <Link
+                  to="/training/offline"
+                  onClick={closeMenu}
+                  className="block py-2 hover:text-cyan-400"
+                >
+                  Offline Training
+                </Link>
+
+                <Link
+                  to="/training/certifications"
+                  onClick={closeMenu}
+                  className="block py-2 hover:text-cyan-400"
+                >
+                  Certifications
+                </Link>
+
               </div>
             )}
+
           </li>
 
           <li className="relative cursor-pointer" onClick={() => toggleMenu("services")}>

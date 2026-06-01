@@ -51,12 +51,12 @@ export default function RemoteJobDetail() {
     <div className="min-h-screen bg-gray-100 p-6 flex justify-center">
       <div className="w-full max-w-3xl bg-white rounded-2xl shadow-lg p-8">
 
-        {/* Back */}
+   
         <Link to="/remote-jobs" className="text-purple-600 hover:underline text-sm">
           ← Back to Remote Jobs
         </Link>
 
-        {/* Header */}
+       
         <div className="mt-4 border-b pb-4">
           <h1 className="text-3xl font-bold text-gray-800">
             {job.title}
@@ -78,7 +78,7 @@ export default function RemoteJobDetail() {
           </div>
         </div>
 
-        {/* Info */}
+      
         <div className="grid grid-cols-3 gap-4 mt-6">
           <div className="bg-gray-50 p-4 rounded-lg text-center">
             <p className="text-xs text-gray-500">Salary</p>
@@ -96,7 +96,7 @@ export default function RemoteJobDetail() {
           </div>
         </div>
 
-        {/* Description */}
+      
         <div className="mt-6">
           <h2 className="text-lg font-semibold text-gray-800">
             Job Description
@@ -108,7 +108,7 @@ export default function RemoteJobDetail() {
           </p>
         </div>
 
-        {/* Requirements */}
+      
         <div className="mt-5">
           <h2 className="text-lg font-semibold text-gray-800">
             Requirements
@@ -122,7 +122,7 @@ export default function RemoteJobDetail() {
           </ul>
         </div>
 
-        {/* Buttons */}
+      
         <div className="mt-8 flex gap-3">
           <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
             Apply Now

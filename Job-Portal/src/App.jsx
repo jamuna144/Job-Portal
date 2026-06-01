@@ -3,7 +3,7 @@ import ITJobs from "./pages/ITJobs";
 import Finance from "./pages/Finance";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Pages/Home.jsx";
-import Hero from "./Hero/Hero.jsx";
+// import Hero from "./Hero/Hero.jsx";
 
 import JobDetail from "./Pages/JobDetails";
 import FinanceJobDetail from "./Pages/FinanceJobDetail";
@@ -43,15 +43,24 @@ import BankingJobDetail from "./Pages/BankingJobDetail.jsx";
 import InternationalJobList from "./Pages/InternationalJobList.jsx";
 import InternationalJobDetail from "./Pages/InternationalJobDetail.jsx";
 
+import OfflineTraining from "./Pages/OfflineTraining.jsx";
+import OnlineTraining from "./Pages/OnlineTraining.jsx";
+import Certifications from "./Pages/Certifications.jsx";
+
+import CourseDetails from "./Pages/CourseDetails";
+import OfflineCourseDetails from "./Pages/offline-course.jsx";
+
+import Footer from "./Footer/Footer.jsx";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Hero />
+      {/* <Hero /> */}
 
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
 
         <Route path="/it-jobs" element={<ITJobs />} />
         <Route path="/finance-jobs" element={<Finance />} />
@@ -93,7 +102,16 @@ function App() {
 
         <Route path="/international-jobs" element={<InternationalJobList />} />
         <Route path="/international-job/:id" element={<InternationalJobDetail />} />
+
+        <Route path="/training/online" element={<OnlineTraining />} />
+        <Route path="/training/offline" element={<OfflineTraining />} />
+        <Route path="/training/certifications" element={<Certifications />} />
+
+        <Route path="/course/:id" element={<CourseDetails />} />
+        <Route path="/offline-course/:id" element={<OfflineCourseDetails />} />
+      
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

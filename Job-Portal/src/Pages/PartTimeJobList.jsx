@@ -51,7 +51,7 @@ export default function PartTimeJobList() {
           key={index}
           className="bg-white p-5 rounded-lg shadow flex justify-between items-start"
         >
-          {/* LEFT */}
+          
           <div>
             <h2 className="text-lg font-semibold text-indigo-700">
               {job.title}
@@ -75,7 +75,7 @@ export default function PartTimeJobList() {
             <p className="text-xs text-gray-500 mt-2">{job.views}</p>
           </div>
 
-          {/* RIGHT */}
+         
           <div className="text-right">
             <p className="text-indigo-600 font-semibold">
               {job.salary}

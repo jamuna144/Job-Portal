@@ -51,7 +51,7 @@ export default function InternshipJobList() {
           key={index}
           className="bg-white p-5 rounded-lg shadow flex justify-between items-start"
         >
-          {/* LEFT SIDE */}
+          
           <div>
             <h2 className="text-lg font-semibold text-teal-700">
               {job.title}
